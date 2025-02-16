@@ -1,0 +1,17 @@
+services:
+  # nginx代理面板 控制台端口81
+  nginx:
+    container_name: nginx
+    image: jc21/nginx-proxy-manager:latest
+    restart: unless-stopped
+    network_mode: host
+    volumes:
+      - ./nginx:/data
+  # ddns面板 控制台端口9876
+  ddns-go:
+    container_name: ddns-go
+    restart: always
+    network_mode: host
+    volumes:
+      - ./ddns-go:/root
+    image: jeessy/ddns-go

@@ -19,7 +19,7 @@ services:
 #      - /srv:/srv
 #    network_mode: host
 #    restart: unless-stopped
-  qbittorrentee:
+  qbittorrentee: # 控制面板端口为8080，网络模式必须为host，方便peerbanhelper获取ip
     image: superng6/qbittorrentee
     container_name: qbittorrentee
     environment:
