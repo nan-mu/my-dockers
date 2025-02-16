@@ -7,7 +7,6 @@ services:
     network_mode: host
     volumes:
       - ./nginx:/data
-      - TORRENTING_PORT=6882
       - http_proxy=http://127.0.0.1:7890
       - https_proxy=http://127.0.0.1:7890
       - HTTP_PROXY=http://127.0.0.1:7890
