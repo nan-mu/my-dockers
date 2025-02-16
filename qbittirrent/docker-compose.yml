@@ -39,7 +39,7 @@ services:
       - /srv:/srv
     network_mode: host
     restart: unless-stopped
-  peerbanhelper:
+  peerbanhelper: # 控制面板端口9898
     image: "ghostchu/peerbanhelper:v7.4.3"
     restart: unless-stopped
     container_name: "peerbanhelper"

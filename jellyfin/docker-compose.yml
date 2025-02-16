@@ -1,0 +1,18 @@
+services:
+  jelly: # 端口为8096
+    image: jellyfin/jellyfin
+    container_name: jelly
+    network_mode: host
+    volumes:
+      - /srv:/srv
+      - /mnt:/mnt
+      - ./jelly/config:/config
+      - ./jelly/cache:/cache
+    restart: unless-stopped
+    environment:
+      - TZ=Asia/Shanghai
+      - all_proxy=host.docker.internal:7890
+      - http_proxy=host.docker.internal:7890
+      - https_proxy=host.docker.internal:7890
+    extra_hosts:
+      - host.docker.internal:host-gateway

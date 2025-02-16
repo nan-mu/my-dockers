@@ -1,5 +1,5 @@
 services:
-  sing-box:
+  sing-box: # 一般使用http://yacd.haishan.me配置
     image: ghcr.io/sagernet/sing-box
     container_name: sing-box
     restart: always
