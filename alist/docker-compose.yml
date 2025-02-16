@@ -1,6 +1,6 @@
 services:
   alist:
-    image: 'xhofe/alist:aio'
+    image: 'xhofe/alist:latest-aio'
     container_name: alist
     volumes:
       - ./alist:/opt/alist/data
