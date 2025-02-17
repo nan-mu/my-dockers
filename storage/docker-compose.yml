@@ -5,6 +5,7 @@ services:
     volumes:
       - ./alist:/opt/alist/data
       - /srv:/srv
+      - /mnt:/mnt
     ports:
       - '5244:5244'
     environment:
@@ -21,3 +22,13 @@ services:
     restart: unless-stopped
     extra_hosts:
       - "host.docker.internal:host-gateway"
+  samba:
+    image: dockurr/samba
+    container_name: samba
+    ports:
+      - 445:445
+    volumes:
+      - ./smb.conf:/etc/samba/smb.conf # 映射文件夹主要配置
+      - ./users.conf:/etc/samba/users.conf # 多用户管理
+      - /srv:/srv
+      - /mnt:/mnt
