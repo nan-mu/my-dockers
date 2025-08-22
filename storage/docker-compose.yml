@@ -13,12 +13,12 @@ services:
       - PGID=0
       - UMASK=022
       - TZ=Asia/Shanghai
-      - http_proxy=http://host.docker.internal:7890
-      - https_proxy=http://host.docker.internal:7890
-      - HTTP_PROXY=http://host.docker.internal:7890
-      - HTTPS_PROXY=http://host.docker.internal:7890
-      - all_proxy=socks5://host.docker.internal:7890
-      - ALL_PROXY=socks5://host.docker.internal:7890
+     # - http_proxy=http://host.docker.internal:7890
+     # - https_proxy=http://host.docker.internal:7890
+     # - HTTP_PROXY=http://host.docker.internal:7890
+     # - HTTPS_PROXY=http://host.docker.internal:7890
+     # - all_proxy=socks5://host.docker.internal:7890
+     # - ALL_PROXY=socks5://host.docker.internal:7890
     restart: unless-stopped
     extra_hosts:
       - "host.docker.internal:host-gateway"
