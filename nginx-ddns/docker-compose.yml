@@ -9,12 +9,12 @@ services:
       - ./nginx:/data
       - ./letsencrypt:/etc/letsencrypt
   # environment:
-     # - http_proxy=http://127.0.0.1:7890
-     # - https_proxy=http://127.0.0.1:7890
-     # - HTTP_PROXY=http://127.0.0.1:7890
-     # - HTTPS_PROXY=http://127.0.0.1:7890
-     # - all_proxy=http://127.0.0.1:7890
-     # - ALL_PROXY=http://127.0.0.1:7890
+     # - http_proxy=http://127.0.0.1:1080
+     # - https_proxy=http://127.0.0.1:1080
+     # - HTTP_PROXY=http://127.0.0.1:1080
+     # - HTTPS_PROXY=http://127.0.0.1:1080
+     # - all_proxy=http://127.0.0.1:1080
+     # - ALL_PROXY=http://127.0.0.1:1080
   # ddns面板 控制台端口9876
   ddns-go:
     container_name: ddns-go
